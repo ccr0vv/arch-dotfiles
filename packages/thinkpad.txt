@@ -1,0 +1,6 @@
+intel-ucode
+intel-media-driver
+mesa
+vulkan-intel
+sof-firmware
+lm_sensors

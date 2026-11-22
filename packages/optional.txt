@@ -1,0 +1,7 @@
+libreoffice-fresh
+neovim
+android-tools
+cups
+cups-pk-helper
+system-config-printer
+steam

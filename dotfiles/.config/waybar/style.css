@@ -1,0 +1,160 @@
+@import "colors.css";
+
+* {
+    font-family: 'JetBrains Mono Nerd Font';
+    border: none;
+    border-radius: 0;
+    min-height: 0;
+    margin: 0;
+    padding: 0;
+    text-shadow: none;
+}
+
+#waybar {
+    font-weight: 700;
+    background: transparent;
+    font-size: 14px;
+    border-radius: 15px;
+    color: @fg;
+    padding: 0 15px;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin-bottom: -10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+}
+
+tooltip {
+    padding: 8px;
+    border-radius: 15px;
+    background: @tooltip-bg;
+    border: 2px solid @border-color;
+}
+
+tooltip label {
+    padding: 8px;
+    font-weight: bold;
+}
+
+.popup * {
+    box-shadow: none;
+    outline: none;
+}
+
+#tray menu, menu {
+    border-radius: 10px;
+    font-weight: 700;
+    color: @fg;
+}
+
+#tray menu > *, menu > * {
+    padding: 3px 0px;
+}
+
+#tray menu > *:hover, menu > *:hover {
+    border-radius: 10px;
+    background-color: @inactive;
+}
+
+/* ---------- modules inside containers ---------- */
+
+#backlight, #wireplumber, #network, #temperature,
+#bluetooth, #battery, #memory, #cpu, #load {
+    padding: 2px 7px;
+}
+
+#workspaces, #bluetooth, #battery, #memory, #temperature,
+#network, #wireplumber, #backlight, #cpu, #load {
+    background: transparent;
+    border-radius: 15px;
+    margin: 0 3px;
+}
+
+/* ---------- containers ---------- */
+
+#custom-start, #custom-logout, #custom-ctlcenter, #power-profiles-daemon,
+#gbattery, #gworkspaces, #gsystem,
+#mpris, #tray, #clock {
+    padding: 2px 9px;
+    border-radius: 15px;
+    background: @module-bg;
+    border: 2px solid @border-color;
+}
+
+
+
+#power-profiles-daemon {
+    margin-left: 5px;
+    padding: 0 12px;
+}
+
+#gbattery {
+    margin: 0 0 0 8px;
+}
+
+#gworkspaces {
+    margin: 0 8px;
+}
+
+#mpris {
+    margin: 0;
+    padding: 2px 14px;
+}
+
+#clock {
+    padding: 2px 18px;
+}
+
+#gsystem {
+    margin: 0 8px;
+}
+
+#tray {
+    margin: 0 8px 0 0;
+}
+
+#custom-ctlcenter {
+    color: @blue;
+    margin-right: 5px;
+    padding: 0 12px;
+}
+
+/* ---------- estados ---------- */
+
+#memory.critical, #cpu.critical,
+#temperature.critical, #battery.critical,
+#network.disconnected {
+    color: @red;
+}
+
+#memory.warning, #cpu.warning,
+#temperature.warning, #battery.warning {
+    color: @yellow;
+}
+
+#workspaces button {
+    color: @workspace-fg;
+    font-size: 14px;
+    border-radius: 15px;
+    margin: 0 7px;
+}
+
+#workspaces button:hover {
+    background: transparent;
+}
+
+#mpris.paused {
+    color: @inactive;
+}
+
+#power-profiles-daemon.performance {
+    color: @red;
+}
+
+#power-profiles-daemon.power-saver {
+    color: @green;
+}
